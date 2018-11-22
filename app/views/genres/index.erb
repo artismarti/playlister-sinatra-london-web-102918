@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All Genres</title>
+  </head>
+  <body>
+    <ul>
+    <%@genres.each do |g| %>
+      <li><a href="/genres/<%=g.slug%>"><%= g.name %></a></li>
+      <% end %>
+    </ul>
+    <p><a href="/songs">View All Songs</a></p>
+    <p><a href="/artists">View All Artists</a></p>
+  </body>
+</html>
