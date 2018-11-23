@@ -6,6 +6,19 @@
   </head>
   <body>
     <h1><%= @artist.name %></h1>
-    
+    <h2>Artist Songs:</h2>
+      <%@artist_songs.each do|s| %>
+      <li><a href="/songs/<%=s.slug%>"><%= s.name %></a></li>
+      <% end %>
+
+    <h2>Artist Genres:</h2>
+    <ul>
+      <%@artist_genres.each do|g| %>
+        <li><a href="/genres/<%=g.slug%>"><%= g.name %></a></li>
+        <% end %>
+    </ul>
+    <p><a href="/artists">View All Artists</a></p>
+    <p><a href="/songs">View All Songs</a></p>
+    <p><a href="/genres">View All Genres</a></p>
   </body>
 </html>
